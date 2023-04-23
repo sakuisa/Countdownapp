@@ -11,8 +11,15 @@
       countdown = 3 * 1000;
     }
 
+    const totalSeconds = Math.floor(countdown / 1000);
+    // 80秒 → 1分20秒
+    // 80 ÷ 60 = 1 余り 20
+    // 80 / 60 = 1.33333.... → 1
+    // 80 % 60 = 20
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
 
-    timer.textContent = countdown;
+    timer.textContent = `${minutes}:${seconds}`;
   }
 
   const timer = document.getElementById('timer');
