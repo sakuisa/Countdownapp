@@ -43,3 +43,13 @@ button:hover{
 button:active{
   opacity: .4;
 }
+
+.inactive{
+  background:  #ddd;
+  color: #444;
+  cursor: default;
+}
+
+.inactive:hover{
+  opacity: 1;
+}
